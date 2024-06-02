@@ -1,0 +1,30 @@
+environments:
+  virtual_network:
+    name: Virtual Network
+    vcs:
+      type: 'terraform'
+      terraformVersion: '1.5.7'
+      repository: 'https://github.com/Constantine19/env0-provider-shenanigans'
+      path: 'workflows/randomize-name'
+  aks_cluster:
+    name: AKS Cluster
+    needs: 
+      - virtual_network
+    vcs:
+      type: 'terraform'
+      terraformVersion: '1.5.7'
+      repository: 'https://github.com/Constantine19/env0-provider-shenanigans'
+      path: 'workflows/randomize-name'
+  aks_cluster:
+    name: AKS Cluster
+    needs: 
+      - virtual_network
+    vcs:
+      type: 'terraform'
+      terraformVersion: '1.5.7'
+      repository: 'https://github.com/Constantine19/env0-provider-shenanigans'
+      path: 'workflows/randomize-name'
+
+settings:
+  environmentRemovalStrategy: destroy 
+
